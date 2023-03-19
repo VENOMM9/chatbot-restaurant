@@ -220,9 +220,8 @@
         let socket = io()
 
         socket.on('send options', options => {
-            let { message } = options;
 
-            document.querySelector('.msg-text').innerText = message;
+            document.querySelector('.msg-text').innerText = options
             document.querySelector('.msg-info-time').innerText = formatDate(new Date())
         })
 
@@ -230,19 +229,19 @@
         const msgerInput = get(".msger-input");
         const msgerChat = get(".msger-chat");
 
-        const BOT_MSGS = [
-        "Hi, how are you?",
-        "Ohh... I can't understand what you trying to say. Sorry!",
-        "I like to play games... But I don't know how to play!",
-        "Sorry if my answers are not relevant. :))",
-        "I feel sleepy! :("
-        ];
+        // const BOT_MSGS = [
+        // "Hi, how are you?",
+        // "Ohh... I can't understand what you trying to say. Sorry!",
+        // "I like to play games... But I don't know how to play!",
+        // "Sorry if my answers are not relevant. :))",
+        // "I feel sleepy! :("
+        // ];
 
         // Icons made by Freepik from www.flaticon.com
         const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
         const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
         const BOT_NAME = "BOT";
-        const PERSON_NAME = "user";
+        const PERSON_NAME = "Customer";
 
         msgerForm.addEventListener("submit", event => {
         event.preventDefault();
@@ -262,8 +261,8 @@
         });
 
         function appendMessage(name, img, side, text) {
-        
-        const msgHTML = `
+           console.log(text.innerText, "hello") 
+            const msgHTML = `
                 <div class="msg ${side}-msg">
                 <div class="msg-img" style="background-image: url(${img})"></div>
 
@@ -278,7 +277,10 @@
                 </div>
             `;
 
+
             msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+
+            // if (typeof text == 'object') document.querySelector('.msg-text')
             msgerChat.scrollTop += 500;
         }
 
@@ -286,32 +288,47 @@
             // const r = random(0, BOT_MSGS.length - 1);
             let msgText;
             socket.on('send response', response => {
+                console.log(response)
                 msgText = response;
-                console.log(msgText)
-                const delay = msgText.split(" ").length * 100;
+                
+                let ul = document.createElement('ul')
+                
+                if (Array.isArray(response)) {
+                    msgText.join(" ")
+                    for (let i = 0; i < response.length; i++) {
+                        let li = document.createElement('li')
+                        li.append(response[i])
+                        ul.appendChild(li)
+                    }
+                    response = ul
+                }
+
+                // console.log(response)
+                // console.log(ul)
+                // const delay =  msgText.split(" ").length * 100;
 
                 setTimeout(() => {
-                    appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
-                }, delay);
+                    appendMessage(BOT_NAME, BOT_IMG, "left", response);
+                }, 1000);
             })
             
         }
 
         // Utils
         function get(selector, root = document) {
-        return root.querySelector(selector);
+            return root.querySelector(selector);
         }
 
         function formatDate(date) {
-        const h = "0" + date.getHours();
-        const m = "0" + date.getMinutes();
+            const h = "0" + date.getHours();
+            const m = "0" + date.getMinutes();
 
-        return `${h.slice(-2)}:${m.slice(-2)}`;
+            return `${h.slice(-2)}:${m.slice(-2)}`;
         }
 
-        function random(min, max) {
-        return Math.floor(Math.random() * (max - min) + min);
-        }
+        // function random(min, max) {
+        // return Math.floor(Math.random() * (max - min) + min);
+        // }
 
         
     </script>
