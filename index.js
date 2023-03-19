@@ -1,4 +1,3 @@
-const { INSPECT_MAX_BYTES } = require('buffer');
 const express = require('express');
 const app = express();
 const http = require('http');
