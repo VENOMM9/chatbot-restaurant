@@ -1,4 +1,4 @@
 [
-    "pizza", 
-    "shawarma"
+    {"name": "Pizza", "price": 100, "menuOption": 100}, 
+    {"name": "Sharwama", "price": 100, "menuOption": 101}
 ]

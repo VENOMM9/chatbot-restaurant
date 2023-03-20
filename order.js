@@ -1,11 +1,11 @@
-// class Order {
-//     constructor(name) {
-//         this.name = name;
-//     }
+class Order {
+    constructor(name) {
+        this.name = name;
+    }
 
-//     placeOrder() {
-//       return items;
-//     }
-// }
+    // placeOrder() {
+    //   return items;
+    // }
+}
 
-// module.exports 
+module.exports = Order
