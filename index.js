@@ -83,13 +83,16 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
   console.log('a user connected');
   socket.emit('send options', options)
+  
+  if (!socket.handshake.session.orders) socket.handshake.session.orders = []
 
   socket.on('send message', msg => {
-    let response;
-    const { orders } =  socket.handshake.session
+    const { orders } = socket.handshake.session;
+    let response = {};
+
     if (menu.mainMenu) {
-      if (!input[msg]) {
-        response = "Invalid value entered"
+      if (!input[msg] && menu.mainMenu) {
+        response.message = "Invalid value entered"
       } else response = input[msg](orders)
     } else response = placeOrder(msg, orders, menu)
     
