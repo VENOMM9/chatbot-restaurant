@@ -1,4 +1,6 @@
 [
-    {"name": "Pizza", "price": 100, "menuOption": 100}, 
-    {"name": "Sharwama", "price": 100, "menuOption": 101}
+    {"name": "Pizza", "price": 2000, "menuOption": 100}, 
+    {"name": "Sharwama", "price": 1000, "menuOption": 101},
+    {"name": "Fried rice", "price": 800, "menuOption": 102},
+    {"name": "Plantain", "price": 300, "menuOption": 102}
 ]

@@ -1,11 +1,11 @@
 class Order {
-    constructor(name) {
+    constructor(name, price) {
         this.name = name;
+        this.price = price;
+        this.isCurrent = true;
     }
 
-    // placeOrder() {
-    //   return items;
-    // }
+    
 }
 
 module.exports = Order
