@@ -15,19 +15,19 @@
     <a href="https://github.com/Ann-tech/Restaurant-chatbot/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://restaurant-chatbot-7cy5.onrender.com/">Demo</a>
+    <a href="https://chatbot-restaurant-dori.onrender.com/">Demo</a>
     ·
-    <a href="https://github.com/Ann-tech/Restaurant-chatbot/issues">Report Bug</a>
+    <a href="https://github.com/VENOMM9/chatbot-restaurant/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Ann-tech/Restaurant-chatbot/issues">Request Feature</a>
+    <a href="https://github.com/VENOMM9/chatbot-restaurant/issues">Request Feature</a>
   </p>
 </div>
 
 <!-- About the API -->
 
-## Annies Restaurant chatbot
+## Venom Restaurant chatbot
 
-&mdash; a restaurant chatbot built by <a href="https://github.com/Ann-tech">Venom</a>.
+&mdash; a restaurant chatbot built by <a href="https://github.com/VENOMM9">Venom</a>.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
