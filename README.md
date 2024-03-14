@@ -58,7 +58,7 @@
 #### Clone this repo
 
 ```sh
-git clone https://github.com/Ann-tech/Restaurant-chatbot.git
+git clone https://github.com/VENOMM9/chatbot-restaurant.git
 ```
 
 #### Install project dependencies
@@ -82,8 +82,8 @@ node index.js
 
 ### Base URL
 
-- https://restaurant-chatbot-7cy5.onrender.com/
-
+- https://chatbot-restaurant-dori.onrender.com
+''
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 ---
