@@ -27,7 +27,7 @@
 
 ## Annies Restaurant chatbot
 
-&mdash; a restaurant chatbot built by <a href="https://github.com/Ann-tech">Ann</a>.
+&mdash; a restaurant chatbot built by <a href="https://github.com/Ann-tech">Venom</a>.
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
